@@ -9,7 +9,7 @@ type AdviceType = {
 }
 
 const Advice = () => {
-    const [advice, setAdvice] = useState("")
+    const [advice, setAdvice] = useState<AdviceType>()
 
     const fetchAdvice = async()=>{
         try {
@@ -35,7 +35,7 @@ const Advice = () => {
         <h2>{advice?.advice}</h2>
         <img src={dividerDesktop} className="dividerDesktop" alt="" />
         <img src={dividerMobile} className="dividerMobile" alt="" />
-        <div className="dice">
+        <div className="dice" onClick={fetchAdvice}>
             <img src={dice} alt="" />
         </div>
     </div>
