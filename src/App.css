@@ -45,7 +45,7 @@ h2{
   margin-bottom: 20px;
 }
 
-.divider-mobile{
+.dividerMobile{
   display: none;
 }
 
@@ -65,4 +65,19 @@ h2{
 
 .dice:hover{
   box-shadow: 0 0 40px 0 var(--Neon-Green);
+}
+
+@media only screen and (max-width: 900px) {
+  .dividerDesktop{
+    display: none;
+  }
+  .dividerMobile{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card{
+    width: 400px;
+  }
 }
